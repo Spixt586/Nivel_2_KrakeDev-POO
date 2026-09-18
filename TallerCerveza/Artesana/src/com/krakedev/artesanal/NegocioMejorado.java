@@ -30,4 +30,18 @@ public class NegocioMejorado{
 		maquinas.add(maq);
 		return codigo;
 	}
+	public void cargarMaquinas() {
+		
+		//For-each para tener un código más limpio
+		for(Maquina maquina : maquinas) {
+			maquina.llenarMaquina();
+		}
+		/*
+		 * Este for es el tradicional el cual se puede usar
+		 * 
+		for(int i = 0; i < maquinas.size(); i++) {
+			Maquina maquina = maquinas.get(i);
+			maquina.llenarMaquina();
+		}*/
+	}
 }
