@@ -30,9 +30,5 @@ public class NegocioMejorado{
 		maquinas.add(maq);
 		return codigo;
 	}
-	
-	public void imprimirArchivos() {
-		System.out.println("HOLA");
-		System.out.println("Mundo");
-	}
+
 }
