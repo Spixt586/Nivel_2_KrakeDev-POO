@@ -108,8 +108,5 @@ public class NegocioMejorado{
 		}
 		
 	}
-	
-	public void imprimir() {
-		System.out.println("Hola mundo");
-	}
+
 }
