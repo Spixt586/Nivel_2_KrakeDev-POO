@@ -24,11 +24,15 @@ public class NegocioMejorado{
 		return idMaquina;
 	}
 	
-	public String agregarMaquina(String nombreCerveza, String descripcion, double precioPorMl) {
+	public boolean agregarMaquina(String nombreCerveza, String descripcion, double precioPorMl) {
 		String codigo = generarCodigo();
+		Maquina maquinaExistente = recuperarMaquina(codigo);
+		if(maquinaExistente != null) {
+			return false;
+		}
 		Maquina maq = new Maquina(nombreCerveza, codigo, descripcion, precioPorMl);
 		maquinas.add(maq);
-		return codigo;
+		return true;
 	}
 	public void cargarMaquinas() {
 		
