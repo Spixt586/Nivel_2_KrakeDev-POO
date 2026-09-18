@@ -108,5 +108,11 @@ public class NegocioMejorado{
 		}
 		
 	}
+	public void registrarConsumo(Cliente cliente, double consumido) {
+		if(cliente != null) {
+			double nuevoTotal = cliente.getTotalConsumido() + consumido;
+			cliente.setTotalConsumido(nuevoTotal);
+		}
+	}
 
 }
