@@ -30,5 +30,7 @@ public class NegocioMejorado{
 		maquinas.add(maq);
 		return codigo;
 	}
-
+	public void metodoDeVerificación() {
+		System.out.println("Si este método fue detectado como una modificación en git, ya funciona correctamente el programa git bash");
+	}
 }
