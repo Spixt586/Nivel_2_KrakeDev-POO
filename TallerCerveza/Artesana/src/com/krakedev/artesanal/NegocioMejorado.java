@@ -30,9 +30,4 @@ public class NegocioMejorado{
 		maquinas.add(maq);
 		return codigo;
 	}
-	public void metodoDeVerificación() {
-		System.out.println("Si este método fue detectado como una modificación en git, ya funciona correctamente el programa git bash");
-		System.out.println("Hora de mal funcionamiento de git: 20pm según registro de github en la rama Main.");
-		System.out.println("Hora de correcto funcionamiento de git: 21:51pm");
-	}
 }
