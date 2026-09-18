@@ -10,19 +10,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-/**
- * Suite de pruebas para NegocioMejorado.generarCodigo().
- *
- * Importante: esta suite prueba EXCLUSIVAMENTE generarCodigo().
- * No se invoca ni se cubre agregarMaquina() en ningún caso.
- *
- * No se usa Mockito ni MockedStatic: como Math.random() no se puede
- * controlar aquí, las pruebas verifican las propiedades que SIEMPRE
- * deben cumplirse en el resultado (formato y rango), en lugar de un
- * valor exacto. El @RepeatedTest compensa la aleatoriedad, ejecutando
- * la verificación muchas veces para dar mayor confianza sobre los
- * límites del rango.
- */
 class TestGenerarCodigoJUnit {
 
     private final NegocioMejorado negocio = new NegocioMejorado();
