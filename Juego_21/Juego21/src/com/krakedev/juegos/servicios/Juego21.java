@@ -72,6 +72,7 @@ public class Juego21 {
 			for(Carta carta : jugador.getCartas()) {
 				total += carta.getValorJuego();
 			}
+			jugador.setPuntajeCartas(total);
 		}
 	}
 }
