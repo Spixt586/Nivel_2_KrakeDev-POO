@@ -65,7 +65,13 @@ public class Juego21 {
 			
 		}
 	}
-	public void recibirCarta(Carta carta) {
-	}
 	
+	public void calcularTotal() {
+		for(Jugador jugador: jugadores) {
+			int total = 0;
+			for(Carta carta : jugador.getCartas()) {
+				total += carta.getValorJuego();
+			}
+		}
+	}
 }
