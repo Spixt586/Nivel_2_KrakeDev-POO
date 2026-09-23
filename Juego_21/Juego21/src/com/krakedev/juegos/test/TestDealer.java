@@ -7,7 +7,7 @@ public class TestDealer {
 		// TODO Auto-generated method stub
 		Dealer dealer = new Dealer();
 		
-		dealer.generarNaipe();
+		dealer.imprimirNaipe();
 
 	}
 

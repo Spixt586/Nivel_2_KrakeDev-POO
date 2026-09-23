@@ -27,7 +27,7 @@ public class Dealer {
 	
 	public void generarNaipe() {
 		ArrayList<String> palos = new ArrayList<String>(List.of("T", "CN", "CR", "D"));
-		ArrayList<String> numeros = new ArrayList<String>(List.of("A", "2", "3", "4", "5", "6" , "7", "8", "9", "10"));
+		ArrayList<String> numeros = new ArrayList<String>(List.of("A", "2", "3", "4", "5", "6" , "7", "8", "9", "10", "J", "Q", "K"));
 			for(String palo: palos) {
 				for(String numero: numeros) {
 					Carta carta = new Carta();
@@ -39,7 +39,7 @@ public class Dealer {
 			}
 	}
 	
-	public void imprim8irNaipe() {
+	public void imprimirNaipe() {
 		for(Carta carta: naipe) {
 			carta.imprimir();
 		}
@@ -48,7 +48,7 @@ public class Dealer {
 	public int generarAleatorio(int maximo){
 		int aleatorio;
 		
-		aleatorio = (int)Math.random() * (maximo + 1);
+		aleatorio = (int)(Math.random() * (maximo + 1));
 				
 		return aleatorio;
 	}

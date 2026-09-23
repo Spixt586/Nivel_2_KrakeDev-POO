@@ -9,6 +9,10 @@ public class Juego21 {
 	private ArrayList<Jugador> jugadores;
 	private Dealer dealer;
 	
+	public Juego21() {
+		this.jugadores = new ArrayList<Jugador>();
+	}
+	
 	public ArrayList<Jugador> getJugadores() {
 		return jugadores;
 	}
