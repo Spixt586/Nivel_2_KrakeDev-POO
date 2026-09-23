@@ -1,6 +1,6 @@
 package com.krakedev.juegos.servicios;
-import java.util.ArrayList;
 
+import java.util.ArrayList;
 import com.krakedev.juegos.entidades.Carta;
 import com.krakedev.juegos.entidades.Jugador;
 
@@ -62,7 +62,6 @@ public class Juego21 {
 	public void repartirRonda() {
 		for(Jugador jugador: jugadores) {
 			repartirCarta(jugador);
-			
 		}
 	}
 	
@@ -74,5 +73,28 @@ public class Juego21 {
 			}
 			jugador.setPuntajeCartas(total);
 		}
+	}
+	
+	public ArrayList<Jugador> validarGanador(){
+		ArrayList<Jugador> jugadorGanador = new ArrayList<>();
+		for(Jugador jugador: jugadores) {
+			if(jugador.getPuntajeCartas() == 21) {
+				jugadorGanador.add(jugador);
+			}
+		}
+		return jugadorGanador;
+	}
+	
+	public ArrayList<Jugador> jugar() {
+		ArrayList<Jugador> ganadores = new ArrayList<>();
+		for(int i = 0; i < 10; i++) {
+			repartirRonda();
+			calcularTotal(); // <-- Se debe calcular el total en cada ronda
+			ganadores = validarGanador();
+			if(ganadores.size() >= 1) { // <-- Detener cuando haya AL MENOS 1 ganador
+				break;
+			}
+		}
+		return ganadores;
 	}
 }

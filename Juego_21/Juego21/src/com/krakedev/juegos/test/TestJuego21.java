@@ -1,5 +1,7 @@
 package com.krakedev.juegos.test;
 
+import java.util.ArrayList;
+
 import com.krakedev.juegos.entidades.Jugador;
 import com.krakedev.juegos.servicios.Juego21;
 
@@ -14,11 +16,13 @@ public class TestJuego21 {
 		juego21.agregarJugador(new Jugador("Andrés"));
 		
 		juego21.inicializar();
-		juego21.repartirRonda();
 		
-		for(Jugador jugador : juego21.getJugadores()) {
+		ArrayList<Jugador> ganadores = juego21.jugar();
+		
+		for(Jugador jugador : ganadores) {
 			jugador.imprimir();
 		}
+		System.out.println(juego21.getDealer().getNaipe().size());
 	}
 
 }

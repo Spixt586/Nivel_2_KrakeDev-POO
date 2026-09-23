@@ -25,7 +25,6 @@ public class Carta {
 	}
 	
 	public void imprimir() {
-		System.out.println("||Valor:" + valor + " || Valor Juego: " + valorJuego + " || Palo: " + palo + " || ");
+		System.out.println(valor + "-" + palo + " Valor Juego: " + valorJuego);
 	}
-	
 }
